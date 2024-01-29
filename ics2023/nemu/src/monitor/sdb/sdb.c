@@ -56,6 +56,27 @@ static int cmd_si(char *args){
   return 0;
 }
 
+static int cmd_info(char *args){
+  return 0;
+}
+
+static int cmd_x(char *args){
+  return 0;
+}
+
+static int cmd_p(char *args){
+  return 0;
+}
+
+static int cmd_w(char *args){
+  return 0;
+}
+
+static int cmd_d(char *args){
+  return 0;
+}
+
+
 
 static int cmd_help(char *args);
 
@@ -67,10 +88,13 @@ static struct {
   { "help", "Display information about all supported commands", cmd_help },
   { "c", "Continue the execution of the program", cmd_c },
   { "q", "Exit NEMU", cmd_q },
-  { "si [N]","Step N commands",cmd_si}
-
   /* TODO: Add more commands */
-
+  { "si [N]","Step N commands",cmd_si},
+  { "info SUBCMD","Print program status",cmd_info},
+  { "x N EXPR","Scan memory",cmd_x},
+  { "p EXPR","Expression evaluation",cmd_p},
+  { "w EXPR","Set watch point",cmd_w},
+  { "d N","Delete watch point N",cmd_d}
 };
 
 #define NR_CMD ARRLEN(cmd_table)
