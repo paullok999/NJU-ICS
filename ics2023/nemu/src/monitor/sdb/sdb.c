@@ -72,6 +72,20 @@ static int cmd_si(char *args){
 }
 
 static int cmd_info(char *args){
+  if(args == NULL || strlen(args) > 1){
+    printf("invalid argument\n");
+    return 0;
+  }
+  switch(args[0]){
+    case 'r':
+	//print registers status
+	isa_reg_display();	
+	break;
+    case 'w':
+	//TODO:print watch points status
+
+	break;
+  }
   return 0;
 }
 
