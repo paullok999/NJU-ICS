@@ -91,12 +91,12 @@ static struct {
   { "c", "Continue the execution of the program", cmd_c },
   { "q", "Exit NEMU", cmd_q },
   /* TODO: Add more commands */
-  { "si [N]","Step N commands",cmd_si},
-  { "info SUBCMD","Print program status",cmd_info},
-  { "x N EXPR","Scan memory",cmd_x},
-  { "p EXPR","Expression evaluation",cmd_p},
-  { "w EXPR","Set watch point",cmd_w},
-  { "d N","Delete watch point N",cmd_d}
+  { "si","Step N commands",cmd_si},
+  { "info","Print program status",cmd_info},
+  { "x","Scan memory",cmd_x},
+  { "p","Expression evaluation",cmd_p},
+  { "w","Set watch point",cmd_w},
+  { "d","Delete watch point N",cmd_d}
 };
 
 #define NR_CMD ARRLEN(cmd_table)
