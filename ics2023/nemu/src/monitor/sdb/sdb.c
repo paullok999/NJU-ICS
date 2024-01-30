@@ -66,6 +66,7 @@ static int cmd_si(char *args){
     cpu_exec(num);
   }else{
     printf("invalid argument:%s\n",args);
+    return -1;
   }
   return 0;
 }
