@@ -55,6 +55,13 @@ static int cmd_q(char *args) {
 }
 
 static int cmd_si(char *args){
+  //parse args to int type
+  int num = atoi(args);
+  if(num > 0){
+    cpu_exec(num);
+  }else{
+    printf("invalid argument:%s\n",args);
+  }
   return 0;
 }
 
@@ -123,6 +130,8 @@ static int cmd_help(char *args) {
   }
   return 0;
 }
+
+
 
 void sdb_set_batch_mode() {
   is_batch_mode = true;
