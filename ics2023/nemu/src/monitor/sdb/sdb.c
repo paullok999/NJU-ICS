@@ -56,10 +56,12 @@ static int cmd_q(char *args) {
 
 static int cmd_si(char *args){
   int num = 0;
+  printf("num:%d\n",num);
   //default 1
   if(args == NULL){
     num = 1;
   }
+  printf("num:%d\n",num);
   //parse args to int type
   num = atoi(args);
   if(num > 0){
