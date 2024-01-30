@@ -55,8 +55,13 @@ static int cmd_q(char *args) {
 }
 
 static int cmd_si(char *args){
+  int num = 0;
+  //default 1
+  if(args == NULL){
+    num = 1;
+  }
   //parse args to int type
-  int num = atoi(args);
+  num = atoi(args);
   if(num > 0){
     cpu_exec(num);
   }else{
