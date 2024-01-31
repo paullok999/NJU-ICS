@@ -24,8 +24,9 @@ const char *regs[] = {
 };
 
 void isa_reg_display() {
+  //Total 32 registers
   for(int i = 0;regs[i];i++){
-  	printf("%s\n",regs[i]);
+  	printf("%s\t\t%d\n",regs[i],cpu.gpr[i]);
   }
 }
 
