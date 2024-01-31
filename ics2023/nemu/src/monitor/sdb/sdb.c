@@ -86,7 +86,7 @@ static int cmd_info(char *args){
 
 	break;
     default:
-	printf("the new function waited to be implement...");
+	printf("the new function waited to be implement...\n");
 	break;
   }
   return 0;
