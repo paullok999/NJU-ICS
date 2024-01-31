@@ -25,8 +25,9 @@ const char *regs[] = {
 
 void isa_reg_display() {
   //Total 32 registers
+  //format:name  hexadecimal  decimal
   for(int i = 0;i < ARRLEN(regs);i++){
-  	printf("%s\t\t%d\n",regs[i],cpu.gpr[i]);
+  	printf("%s\t\t%02x\t\t%d\n",regs[i],cpu.gpr[i],cpu.gpr[i]);
   }
 }
 
