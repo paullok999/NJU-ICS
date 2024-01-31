@@ -85,6 +85,9 @@ static int cmd_info(char *args){
 	//TODO:print watch points status
 
 	break;
+    default:
+	printf("the new function waited to be implement...");
+	break;
   }
   return 0;
 }
