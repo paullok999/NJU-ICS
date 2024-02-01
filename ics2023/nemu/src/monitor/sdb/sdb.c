@@ -102,16 +102,14 @@ static int cmd_x(char *args){
   //recognize two arguments
   char *count = strtok(args," ");
   char *expr = strtok(NULL," ");
-  printf("%s---%s\n",count,expr);
   int a;
   sscanf(expr,"%x",&a);
-  printf("%d\n",a);
   vaddr_t va = a;
-  printf("%u\n",va);
   int len = atoi(count);
   word_t val;
   printf("%s:",expr);
   for(int i = 0;i < len;i++){
+      if(i % 4 == 0)printf("0x%08x:",va);
       val = vaddr_read(va,1);
       printf("0x%02x\t",val); 
       va += 1;
