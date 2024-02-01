@@ -101,7 +101,8 @@ static int cmd_x(char *args){
   char *count = strtok(args," ");
   char *expr = strtok(NULL," ");
   printf("%s---%s\n",count,expr);
-  int a  = atoi(expr);
+  int a;
+  sscanf(expr,"%x",&a);
   printf("%d\n",a);
   return 0;
 }
