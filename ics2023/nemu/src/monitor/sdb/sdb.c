@@ -106,11 +106,10 @@ static int cmd_x(char *args){
   int a;
   sscanf(expr,"%x",&a);
   printf("%d\n",a);
-//  int len = atoi(count);
   vaddr_t va = a;
   printf("%u\n",va);
-//  word_t ans = vaddr_read(va,len);
-//  printf("%u\n",ans);
+  word_t ans = vaddr_read(va,4);
+  printf("%u\n",ans);
   return 0;
 }
 
