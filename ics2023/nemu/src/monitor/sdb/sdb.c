@@ -108,11 +108,11 @@ static int cmd_x(char *args){
   int len = atoi(count);
   word_t val;
   for(int i = 0;i < len;i++){
-      if(i % 4 == 0)printf("0x%08x:",va);
+      if(i != 0 && i % 4 == 0)printf("\n");
+      if(i % 4 == 0)printf("0x%08x: ",va);
       val = vaddr_read(va,1);
       printf("0x%02x\t",val); 
       va += 1;
-      if(i != 0 && i % 4 == 0)printf("\n");
   }
   printf("\n");
   return 0;
