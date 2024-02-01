@@ -112,7 +112,7 @@ static int cmd_x(char *args){
       val = vaddr_read(va,1);
       printf("0x%02x\t",val); 
       va += 1;
-      if(i % 4 == 0)printf("\n");
+      if(i != 0 && i % 4 == 0)printf("\n");
   }
   printf("\n");
   return 0;
