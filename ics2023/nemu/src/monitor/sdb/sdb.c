@@ -93,6 +93,14 @@ static int cmd_info(char *args){
 }
 
 static int cmd_x(char *args){
+  if(!args){
+    printf("You must provide argument\n");
+    return 1;
+  }
+  //recognize two arguments
+  char *count = strtok(args," ");
+  char *expr = strtok(args," ");
+  printf("%s---%s\n",count,expr);
   return 0;
 }
 
