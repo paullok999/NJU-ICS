@@ -112,9 +112,9 @@ static int cmd_x(char *args){
   word_t val;
   printf("%s:",expr);
   for(int i = 0;i < len;i++){
-      val = vaddr_read(va,4);
-      printf("%02x\t",val); 
-      va += 4;
+      val = vaddr_read(va,1);
+      printf("0x%02x\t",val); 
+      va += 1;
   }
   printf("\n");
   return 0;
