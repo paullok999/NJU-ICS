@@ -99,7 +99,7 @@ static int cmd_x(char *args){
   }
   //recognize two arguments
   char *count = strtok(args," ");
-  char *expr = strtok(args," ");
+  char *expr = strtok(NULL," ");
   printf("%s---%s\n",count,expr);
   return 0;
 }
