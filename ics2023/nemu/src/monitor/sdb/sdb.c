@@ -108,8 +108,15 @@ static int cmd_x(char *args){
   printf("%d\n",a);
   vaddr_t va = a;
   printf("%u\n",va);
-  word_t ans = vaddr_read(va,4);
-  printf("%u\n",ans);
+  int len = atoi(count);
+  word_t val;
+  printf("%s:",expr);
+  for(int i = 0;i < len;i++){
+      val = vaddr_read(va,4);
+      printf("%02x\t",val); 
+      va += 4;
+  }
+  printf("\n");
   return 0;
 }
 
