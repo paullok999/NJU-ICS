@@ -18,6 +18,8 @@
 #include <readline/readline.h>
 #include <readline/history.h>
 #include "sdb.h"
+#include <memory/vaddr.h>
+
 
 static int is_batch_mode = false;
 
@@ -104,6 +106,10 @@ static int cmd_x(char *args){
   int a;
   sscanf(expr,"%x",&a);
   printf("%d\n",a);
+  int len = atoi(count);
+  vaddr_t va = a;
+  word_t ans = vaddr_read(va,len);
+  printf("%u\n",ans);
   return 0;
 }
 
