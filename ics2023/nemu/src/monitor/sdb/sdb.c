@@ -101,8 +101,8 @@ static int cmd_x(char *args){
   char *count = strtok(args," ");
   char *expr = strtok(NULL," ");
   printf("%s---%s\n",count,expr);
-  vaddr_t addr = atoi(expr);
-  assert(addr);
+  int a  = atoi(expr);
+  printf("%d\n",a);
   return 0;
 }
 
