@@ -105,7 +105,7 @@ static int cmd_x(char *args){
   vaddr_t va;
   int res = sscanf(expr,"%x",&va);
   if(res <= 0){
-    printf("Address convert failed\n");
+    printf("Address convert failed:%d\n",res);
     return 1;
   }
   int len = atoi(count);
