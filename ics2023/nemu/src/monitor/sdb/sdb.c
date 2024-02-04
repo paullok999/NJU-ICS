@@ -114,6 +114,7 @@ static int cmd_x(char *args){
   for(int i = 0;i < len;i++){
       if(i != 0 && i % 4 == 0)printf("\n");
       if(i % 4 == 0)printf("0x%08x: ",va);
+      //access memory
       val = vaddr_read(va,1);
       printf("0x%02x    ",val); 
       va += 1;
