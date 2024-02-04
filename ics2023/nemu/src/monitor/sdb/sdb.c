@@ -128,6 +128,19 @@ static int cmd_x(char *args){
 }
 
 static int cmd_p(char *args){
+  if(!args){
+    printf("You must provide argument\n");
+    return 1;
+  }
+  bool is_success = false;
+  word_t res_of_expr = expr(args,&is_success);
+  if(is_success){
+    printf("%d\n",res_of_expr);
+  }else{
+    printf("evaluation failed\n");
+    return 1;
+  }
+  
   return 0;
 }
 
