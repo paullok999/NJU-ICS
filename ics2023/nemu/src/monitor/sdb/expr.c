@@ -23,7 +23,7 @@
 enum {
   TK_NOTYPE = 256, TK_EQ,
   /* TODO: Add more token types */
-  TK_NUMBER,TK_LEFT_PARENTHESES,TK_RIGHT_PARENTHESES
+  TK_NUMBER,TK_OP,TK_LEFT_PARENTHESES,TK_RIGHT_PARENTHESES
 
 };
 
@@ -37,12 +37,9 @@ static struct rule {
    */
 
   {" +", TK_NOTYPE},    // spaces
-  {"\\+", '+'},         // plus
-  {"\\-", '-'},		// minus
-  {"\\*", '*'},         // multiply
-  {"\\/", '/'},         // divide
+  {"[0-9]+",TK_NUMBER}, // number
+  {"[+\\-*/]",TK_OP},
   {"==", TK_EQ},        // equal
-  {"[0-9]+",TK_NUMBER},	// number
   {"\\(",TK_LEFT_PARENTHESES},	//left parentheses
   {"\\)",TK_RIGHT_PARENTHESES},	//right parentheses
 };
