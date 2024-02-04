@@ -42,7 +42,7 @@ static struct rule {
   {"\\*", '*'},         // multiply
   {"\\/", '/'},         // divide
   {"==", TK_EQ},        // equal
-  {"\\s+",TK_NUMBER},	// number
+  {"[0-9]+",TK_NUMBER},	// number
   {"\\(",TK_LEFT_PARENTHESES},	//left parentheses
   {"\\)",TK_RIGHT_PARENTHESES},	//right parentheses
 };
