@@ -103,7 +103,11 @@ static int cmd_x(char *args){
   char *count = strtok(args," ");
   char *expr = strtok(NULL," ");
   vaddr_t va;
-  sscanf(expr,"%x",&va);
+  int res = sscanf(expr,"%x",&va);
+  if(res <= 0){
+    printf("Address convert failed\n");
+    return 1;
+  }
   int len = atoi(count);
   word_t val;
   for(int i = 0;i < len;i++){
