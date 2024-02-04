@@ -102,8 +102,12 @@ static int cmd_x(char *args){
   //recognize two arguments
   char *count = strtok(args," ");
   char *expr = strtok(NULL," ");
+  if(!count || !expr){
+    printf("Invalid arguments\n");
+    return 1;
+  }
   vaddr_t va;
-  //TODO:the expr should call function tp parse
+  //TODO:you should call function to parse
   int res = sscanf(expr,"%x",&va);
   if(res <= 0){
     printf("Address convert failed\n");
