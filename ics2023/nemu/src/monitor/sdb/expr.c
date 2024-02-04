@@ -38,7 +38,7 @@ static struct rule {
 
   {" +", TK_NOTYPE},    // spaces
   {"[0-9]+",TK_NUMBER}, // number
-  {"[+\\-*/]",TK_OP},
+  {"[-+*/]",TK_OP},
   {"==", TK_EQ},        // equal
   {"\\(",TK_LEFT_PARENTHESES},	//left parentheses
   {"\\)",TK_RIGHT_PARENTHESES},	//right parentheses
