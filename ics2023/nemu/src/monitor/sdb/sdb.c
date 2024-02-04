@@ -115,7 +115,7 @@ static int cmd_x(char *args){
       if(i != 0 && i % 4 == 0)printf("\n");
       if(i % 4 == 0)printf("0x%08x: ",va);
       val = vaddr_read(va,1);
-      printf("0x%02x\t",val); 
+      printf("0x%02x    ",val); 
       va += 1;
   }
   printf("\n");
