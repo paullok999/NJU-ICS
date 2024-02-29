@@ -99,7 +99,6 @@ static bool make_token(char *e) {
 	  tokens[j].type = rules[i].token_type;
 	  strncpy(tokens[j].str,substr_start,substr_len);
 	  tokens[j].str[substr_len] = '\0';
-	  printf("%d---%s\n",tokens[j].type,tokens[j].str);
 	  j++;
 	}
 
@@ -112,6 +111,8 @@ static bool make_token(char *e) {
       return false;
     }
   }
+  nr_token = j;//record the number of valid token
+  printf("the number of tokens:%d\n",nr_token);
 
   return true;
 }
