@@ -102,7 +102,7 @@ static bool make_token(char *e) {
 	  token.str[substr_len] = '\0';
 	  tokens[j] = token;
 	  j++;
-	  printf("%d---%s\n",token.type,token.str);
+	  printf("%d---%s\n",tokens[j].type,tokens[j].str);
 	}
 
         break;
