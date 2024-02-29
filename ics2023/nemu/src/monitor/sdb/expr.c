@@ -101,7 +101,7 @@ static bool make_token(char *e) {
 	  strcpy(token.str,substr_start);
 	  tokens[j] = token;
 	  j++;
-	  printf("%d---%s\n",tokens[j].type,tokens[j].str);
+	  printf("%d---%s\n",token.type,token.str);
 	}
 
         break;
