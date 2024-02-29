@@ -96,14 +96,11 @@ static bool make_token(char *e) {
          * of tokens, some extra actions should be performed.
          */
 	if(rules[i].token_type != TK_NOTYPE){
-	  Token token;
-	  token.type = rules[i].token_type;
-	  strncpy(token.str,substr_start,substr_len);
-	  token.str[substr_len] = '\0';
-	  tokens[j] = token;
+	  tokens[j].type = rules[i].token_type;
+	  strncpy(tokens[j].str,substr_start,substr_len);
+	  tokens[j].str[substr_len] = '\0';
 	  j++;
 	  printf("%d---%s\n",tokens[j].type,tokens[j].str);
-	  printf("%ld\n",sizeof(tokens) / sizeof(Token));
 	}
 
         break;
