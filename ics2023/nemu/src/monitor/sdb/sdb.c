@@ -132,7 +132,7 @@ static int cmd_p(char *args){
     printf("You must provide argument\n");
     return 1;
   }
-  bool is_success = false;
+  bool is_success = true;
   word_t res_of_expr = expr(args,&is_success);
   if(is_success){
     printf("%d\n",res_of_expr);
