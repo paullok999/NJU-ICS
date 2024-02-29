@@ -99,8 +99,8 @@ static bool make_token(char *e) {
 	  tokens[j].type = rules[i].token_type;
 	  strncpy(tokens[j].str,substr_start,substr_len);
 	  tokens[j].str[substr_len] = '\0';
-	  j++;
 	  printf("%d---%s\n",tokens[j].type,tokens[j].str);
+	  j++;
 	}
 
         break;
