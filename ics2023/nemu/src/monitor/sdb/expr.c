@@ -74,7 +74,7 @@ static int nr_token __attribute__((used))  = 0;
 
 static bool make_token(char *e) {
   int position = 0;
-  int i;
+  int i,j = 0;
   regmatch_t pmatch;
 
   nr_token = 0;
@@ -95,11 +95,14 @@ static bool make_token(char *e) {
          * to record the token in the array `tokens'. For certain types
          * of tokens, some extra actions should be performed.
          */
-
-        switch (rules[i].token_type) {
-	    case TK_NOTYPE:
-		break;
-        }
+	if(rules[i].token_type != TK_NOTYPE){
+	  Token token;
+	  token.type = rules[i].token_type;
+	  strcpy(token.str,substr_start);
+	  tokens[j] = token;
+	  j++;
+	  printf("%d---%s\n",tokens[j].type,tokens[j].str);
+	}
 
         break;
       }
