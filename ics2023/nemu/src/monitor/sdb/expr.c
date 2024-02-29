@@ -98,7 +98,8 @@ static bool make_token(char *e) {
 	if(rules[i].token_type != TK_NOTYPE){
 	  Token token;
 	  token.type = rules[i].token_type;
-	  strcpy(token.str,substr_start);
+	  strncpy(token.str,substr_start,substr_len);
+	  token.str[substr_len] = '\0';
 	  tokens[j] = token;
 	  j++;
 	  printf("%d---%s\n",token.type,token.str);
